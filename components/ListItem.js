@@ -28,3 +28,29 @@ const styles = StyleSheet.create({
   }
  
 });
+
+
+// * Operador de extensión de objeto
+// * props Enviar datos de padre a hijo
+const ListItem = ({ imageUrl, title, author, onPress }) => {
+    return (
+      <TouchableOpacity style={styles.itemContainer} onPress={onPress}> 
+        <View style={styles.leftContainer}>
+          {!! imageUrl &&( 
+            <Image
+              style={{ width: 90, height: 100 }}
+              source={{uri: imageUrl}} 
+            />
+          )}
+          </View>
+        <View style={styles.rightContainer}>
+          <Text numberOfLines={3} style={styles.text}>{/* 3 o más líneas..... */}
+          {title}
+          </Text>
+          <Text style={styles.subText}>{author}</Text>
+        </View>
+      </TouchableOpacity>
+    )
+  }
+  
+  export default ListItem;
