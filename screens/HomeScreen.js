@@ -15,3 +15,42 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000',
   },
 });
+export default HomeScreen = ({ navigation }) => {
+
+  const [articles, setArticles] = useState([]); //*estado introducido
+  const [loading, setLoading] = useState(false);
+                  
+
+  useEffect(() => { //* Introducción de efecto de uso
+    fetchArticle();
+  }, []) //*Si pasa una matriz vacía, se activará solo cuando se monte
+
+
+  const fetchArticle = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get(URL);
+      setArticles(response.data.articles);
+    } catch (error) {
+      console.error(error);
+    }
+    setLoading(false);
+  }
+  return (
+    <SafeAreaView style={styles.container}>
+    <FlatList
+      data={ articles } //* Pon una matriz de datos
+      renderItem={({ item }) =>( 
+        <ListItem
+          imageUrl={ item.urlToImage }
+          title={ item.title }
+          author={ item.author }
+          onPress={() => navigation.navigate("Article", { article: item })} //*component.name
+        />
+      )}
+      keyExtractor={(item, index) => index.toString()}
+    />
+    { loading && <Loading />}
+    </SafeAreaView>
+  );
+}
