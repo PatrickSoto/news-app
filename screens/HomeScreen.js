@@ -6,7 +6,7 @@ import axios from 'axios'
 import Loading from '../components/Loading'
 
 
-const URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${Constants.manifest.extra.newsApiKey}`;
+const URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${Constants.manifest.extra.newsApiKey}`;//url de la api,mandando a llamar apikey desde app.json
 
 
 const styles = StyleSheet.create({
@@ -32,10 +32,11 @@ export default HomeScreen = ({ navigation }) => {
       const response = await axios.get(URL);
       setArticles(response.data.articles);
     } catch (error) {
-      console.error(error);
+      console.error(error);//mostrando posible error a la hora de cargar datos desde la api
     }
     setLoading(false);
   }
+  //desplegando lista de articulos
   return (
     <SafeAreaView style={styles.container}>
     <FlatList
@@ -48,7 +49,7 @@ export default HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Article", { article: item })} //*component.name
         />
       )}
-      keyExtractor={(item, index) => index.toString()}
+      keyExtractor={(item, index) => index.toString()}//extracion 
     />
     { loading && <Loading />}
     </SafeAreaView>
