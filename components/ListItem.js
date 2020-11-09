@@ -1,5 +1,6 @@
+// importando librerias
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';//importando imagenes,textos, y el view desde index
 
 const styles = StyleSheet.create({
   
@@ -19,11 +20,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between", //* Abre una brecha
   },
   text:{
-    fontSize: 16,
+    fontSize: 16,//tamaño de la letra principal dela rticulo (titulo)
     color: '#FFFFFF'
   },
   subText: {
-    fontSize: 12,
+    fontSize: 12,//tamaño d letra del autor
     color: '#FFFFFF'
   }
  
@@ -39,7 +40,7 @@ const ListItem = ({ imageUrl, title, author, onPress }) => {
           {!! imageUrl &&( 
             <Image
               style={{ width: 90, height: 100 }}
-              source={{uri: imageUrl}} 
+              source={{uri: imageUrl}} //url de imagen de cada seccion 
             />
           )}
           </View>
