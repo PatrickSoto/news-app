@@ -1,7 +1,9 @@
+//importando librerias
 import React from 'react';
 import { View, StyleSheet, ActivityIndicator } from 'react-native'
 
-const styles = StyleSheet.create({  
+const styles = StyleSheet.create({  //creando container 
+  //especificaciones
   container: {
     position: "absolute",
     top: 0,
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   }
 });
-
+//retornando valores
 const Loading = () => {
   return (
     <View style={ styles.container }>
