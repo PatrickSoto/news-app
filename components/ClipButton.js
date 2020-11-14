@@ -10,10 +10,10 @@ const styles = StyleSheet.create({
 })
 // esperando el momento clik para desplegar el container
 const ClipButton = ({ onPress, enabled }) => {
-  const name = enabled ? 'bookmark' : 'bookmark-o';
+  const name = enabled ? 'star' : 'star-o';
   return (
     <TouchableOpacity onPress={ onPress } style={ styles.container }>
-      <FontAwesome name={ name } size={ 40 } color="White" />
+      <FontAwesome name={ name } size={ 35 } color="black" />
     </TouchableOpacity>
   )
 }
