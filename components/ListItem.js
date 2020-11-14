@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     height: 90,
     width: '100%',
     borderColor: 'gray',
-    borderWidth: 1,
-    flexDirection: "row" //* Horizontalmente // * columna Verticalmente
+    borderWidth: 5,
+    flexDirection: "row-reverse" //* Horizontalmente // * columna Verticalmente
   },
   leftContainer: {
     width: 90
@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
   },
   text:{
     fontSize: 16,//tamaño de la letra principal dela rticulo (titulo)
-    color: '#FFFFFF'
+    color: '#000000'
   },
   subText: {
     fontSize: 12,//tamaño d letra del autor
-    color: '#FFFFFF'
+    color: '#000000'
   }
  
 });
@@ -39,13 +39,13 @@ const ListItem = ({ imageUrl, title, author, onPress }) => {
         <View style={styles.leftContainer}>
           {!! imageUrl &&( 
             <Image
-              style={{ width: 90, height: 100 }}
+              style={{ width: 100, height: 80 }}
               source={{uri: imageUrl}} //url de imagen de cada seccion 
             />
           )}
           </View>
         <View style={styles.rightContainer}>
-          <Text numberOfLines={3} style={styles.text}>{/* 3 o más líneas..... */}
+          <Text numberOfLines={2} style={styles.text}>{/* 3 o más líneas..... */}
           {title}
           </Text>
           <Text style={styles.subText}>{author}</Text>
