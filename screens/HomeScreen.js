@@ -13,7 +13,7 @@ const URL = 'https://newsapi.org/v2/everything?q=usa&language=en&domains=bbc.com
 const styles = StyleSheet.create({
   container: {
     flex: 1, //* Misma pantalla que resetCss
-    backgroundColor: '#FFFF',
+    backgroundColor: 'black',
   },
 });
 export default HomeScreen = ({ navigation }) => {

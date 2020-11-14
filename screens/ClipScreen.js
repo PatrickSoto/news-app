@@ -7,7 +7,7 @@ import ListItem from '../components/ListItem';//exportando componentes de nodes 
 const styles = StyleSheet.create({//creando contenedor para que contenga lo que manda a traer la api url,texto
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'black',
   },
 })
 

@@ -13,7 +13,7 @@ const URL = 'https://newsapi.org/v2/everything?&language=en&domains=foxsports.co
 const styles = StyleSheet.create({
   container: {
     flex: 1, //* Misma pantalla que resetCss
-    backgroundColor: '#FFFF',
+    backgroundColor: 'black',
   },
 });
 export default HomeScreen = ({ navigation }) => {

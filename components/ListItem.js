@@ -7,8 +7,12 @@ const styles = StyleSheet.create({
   itemContainer: {
     height: 90,
     width: '100%',
-    borderColor: 'gray',
+    borderColor: 'white',
     borderWidth: 5,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
     flexDirection: "row-reverse" //* Horizontalmente // * columna Verticalmente
   },
   leftContainer: {
@@ -21,11 +25,11 @@ const styles = StyleSheet.create({
   },
   text:{
     fontSize: 16,//tamaño de la letra principal dela rticulo (titulo)
-    color: '#000000'
+    color: 'white'
   },
   subText: {
     fontSize: 12,//tamaño d letra del autor
-    color: '#000000'
+    color: 'white'
   }
  
 });
@@ -45,7 +49,7 @@ const ListItem = ({ imageUrl, title, author, onPress }) => {
           )}
           </View>
         <View style={styles.rightContainer}>
-          <Text numberOfLines={2} style={styles.text}>{/* 3 o más líneas..... */}
+          <Text numberOfLines={2} style={styles.text}>{/* 2 o más líneas..... */}
           {title}
           </Text>
           <Text style={styles.subText}>{author}</Text>

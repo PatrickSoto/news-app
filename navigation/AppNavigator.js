@@ -60,7 +60,7 @@ const ClipStack = () => {
 
 //asignando icono a cada item
 const screenOption = ({ route }) => ({
-  tabBarIcon: ({ color, size }) => {
+  tabBarIcon: ({ black, size }) => {
     let iconName;
 
     if (route.name === 'Home') {
@@ -74,7 +74,7 @@ const screenOption = ({ route }) => ({
     }
 
     // ¡Puede devolver cualquier componente que desee aquí!
-    return <FontAwesome name={iconName} size={size} color={color} />;
+    return <FontAwesome name={iconName} size={size} color={black} />;
   },
 })//orden de los items en la barra de navegador
 export default AppNavigator = () => {
