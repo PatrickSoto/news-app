@@ -7,13 +7,13 @@ import Loading from '../components/Loading'
 
 
 
-const URL = 'https://newsapi.org/v2/everything?q=usa&language=en&domains=bbc.com,cnn.com,foxsports.com,foxnews.com&pageSize=100&page=1&apiKey=3037f8b62af64c07b753211615f7038c';//url de la api,mandando a llamar apikey desde app.json
+const URL = 'https://newsapi.org/v2/everything?q=usa&language=en&domains=bbc.com,foxsports.com,foxnews.com&pageSize=100&page=1&apiKey=3037f8b62af64c07b753211615f7038c';//url de la api,mandando a llamar apikey desde app.json
 
 
 const styles = StyleSheet.create({
   container: {
     flex: 1, //* Misma pantalla que resetCss
-    backgroundColor: '#000000',
+    backgroundColor: '#FFFF',
   },
 });
 export default HomeScreen = ({ navigation }) => {
