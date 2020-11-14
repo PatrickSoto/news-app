@@ -7,7 +7,7 @@ import Loading from '../components/Loading'
 
 
 
-const URL = 'https://newsapi.org/v2/everything?q=usa&language=en&domains=foxsports.com,nba.com,nfl.com,mlssoccer.com,nhl.com,&pageSize=100&page=1&apiKey=3037f8b62af64c07b753211615f7038c';//url de la api,mandando a llamar apikey desde app.json
+const URL = 'https://newsapi.org/v2/everything?&language=en&domains=foxsports.com,nba.com,nfl.com,mlssoccer.com,nhl.com,&pageSize=100&page=1&apiKey=3037f8b62af64c07b753211615f7038c';//url de la api,mandando a llamar apikey desde app.json
 
 
 const styles = StyleSheet.create({

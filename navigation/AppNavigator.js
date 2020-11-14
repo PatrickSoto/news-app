@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
-import HomeScreen from '../screens/SportsScreen';
+import SportsScreen from '../screens/SportsScreen';
 import ArticleScreen from '../screens/ArticleScreen';
 import ClipScreen from '../screens/ClipScreen';
 import { TabBarIOS } from 'react-native';
@@ -34,7 +34,7 @@ const SportsStack = () => {
   return (
     <Stack.Navigator>
     <Stack.Screen
-      name="News"
+      name="Sports"
       component={ SportsScreen }
       options={{ headerShown: true }}
     />
@@ -49,8 +49,8 @@ const SportsStack = () => {
 const ClipStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Noticias Guardadas" component={ ClipScreen }/>
-      <Stack.Screen name="Articulo" component={ ArticleScreen }/>
+      <Stack.Screen name="Favorite" component={ ClipScreen }/>
+      <Stack.Screen name="Article" component={ ArticleScreen }/>
     </Stack.Navigator>
   )
 }
