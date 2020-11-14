@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
+import HomeScreen from '../screens/SportsScreen';
 import ArticleScreen from '../screens/ArticleScreen';
 import ClipScreen from '../screens/ClipScreen';
 import { TabBarIOS } from 'react-native';
@@ -18,6 +19,23 @@ const HomeStack = () => {
     <Stack.Screen
       name="News"
       component={ HomeScreen }
+      options={{ headerShown: true }}
+    />
+    <Stack.Screen
+      name="Article"
+      component={ ArticleScreen }
+    />
+  </Stack.Navigator>
+  )
+}
+
+
+const SportsStack = () => {
+  return (
+    <Stack.Navigator>
+    <Stack.Screen
+      name="News"
+      component={ SportsScreen }
       options={{ headerShown: true }}
     />
     <Stack.Screen
@@ -43,10 +61,14 @@ const screenOption = ({ route }) => ({
   tabBarIcon: ({ color, size }) => {
     let iconName;
 
-    if (route.name === 'Inicio') {
+    if (route.name === 'Home') {
       iconName = "home";
-    } else if (route.name === 'Clip') {
+    } else if (route.name === 'Favorite') {
       iconName = "star"
+    }
+
+    if (route.name === 'Sports') {
+      iconName = "futbol-o" 
     }
 
     // ¡Puede devolver cualquier componente que desee aquí!
@@ -57,8 +79,9 @@ export default AppNavigator = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={ screenOption }>
-        <Tab.Screen name="Inicio" component={ HomeStack }/>
-        <Tab.Screen name="Clip" component={ ClipStack }/>
+        <Tab.Screen name="Home" component={ HomeStack }/>
+        <Tab.Screen name="Sports" component={ SportsStack }/>
+        <Tab.Screen name="Favorite" component={ ClipStack }/>
       </Tab.Navigator>
     </NavigationContainer>
   );
