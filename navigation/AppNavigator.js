@@ -1,3 +1,4 @@
+//Exportando librerias de nodes module
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -9,10 +10,11 @@ import ArticleScreen from '../screens/ArticleScreen';
 import ClipScreen from '../screens/ClipScreen';
 import { TabBarIOS } from 'react-native';
 
-
+//creando la barra de navegador
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
+//dando nombre a cada items
 const HomeStack = () => {
   return (
     <Stack.Navigator>
@@ -29,7 +31,7 @@ const HomeStack = () => {
   )
 }
 
-
+//dando nombre a cada items
 const SportsStack = () => {
   return (
     <Stack.Navigator>
@@ -45,7 +47,7 @@ const SportsStack = () => {
   </Stack.Navigator>
   )
 }
-
+//al dar clik a cada item, abrir pagina 
 const ClipStack = () => {
   return (
     <Stack.Navigator>
@@ -56,7 +58,7 @@ const ClipStack = () => {
 }
 
 
-
+//asignando icono a cada item
 const screenOption = ({ route }) => ({
   tabBarIcon: ({ color, size }) => {
     let iconName;
@@ -74,7 +76,7 @@ const screenOption = ({ route }) => ({
     // ¡Puede devolver cualquier componente que desee aquí!
     return <FontAwesome name={iconName} size={size} color={color} />;
   },
-})
+})//orden de los items en la barra de navegador
 export default AppNavigator = () => {
   return (
     <NavigationContainer>
